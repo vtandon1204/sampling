@@ -2,12 +2,12 @@
 
 ## Overview
 
-This project aims to explore various sampling techniques to handle class imbalance in a dataset and evaluate their performance with different machine learning models. The dataset used in this project is the Credit Card Fraud Detection dataset, which is originally imbalanced. The goal is to apply five sampling techniques to balance the dataset and use five machine learning models to evaluate their performance.
+This project investigates different sampling techniques to address the issue of class imbalance in datasets. The Credit Card Fraud Detection dataset is used as a case study. We apply five sampling methods to balance the dataset and train five machine learning models to evaluate their effectiveness in identifying fraudulent transactions.
 
 ## Dataset
 
 The dataset used in this project is available for download from the following link:
-https://github.com/AnjulaMehto/Sampling_Assignment/blob/f0c491556cded07517283c75e603bccb70112c26/Creditcard_data.csv 
+[https://github.com/AnjulaMehto/Sampling_Assignment/blob/f0c491556cded07517283c75e603bccb70112c26/Creditcard_data.csv] 
 Credit Card Data CSV
 
 ## Data Description
