@@ -10,43 +10,45 @@ The dataset used in this project is available for download from the following li
 
 ## Data Description
 
-Class: The target variable, where 1 represents a fraudulent transaction, and 0 represents a non-fraudulent transaction.
+- Class: Target variable, where 1 indicates a fraudulent transaction, and 0 indicates a legitimate transaction.
 
-V1 to V28: Various unknown features representing different aspects of the transaction.
+- V1 to V28: Features derived from the original dataset, representing various transaction details.
 
 ## Objective
 
-Download and load the dataset.
-Balance the dataset using different sampling techniques.
-Apply five sampling techniques and evaluate them using five machine learning models.
-Compare the performance of each sampling technique with each machine learning model to determine the best combination for detecting credit card fraud.
+- Load the dataset and handle the class imbalance problem using sampling techniques.
+- Apply five different sampling strategies to the dataset.
+- Evaluate the effectiveness of these techniques using five machine learning algorithms.
+- Compare and analyze results to determine the most effective combination for detecting fraud.
 
 ## Sampling Techniques
 
-Random Undersampler : Randomly reduces the majority class to balance the dataset.
+- Random Undersampling: Reduces the majority class size by randomly selecting a subset of examples.
 
-Random Oversampler : Randomly increases the minority class by replicating examples.
+- Random Oversampling: Increases the minority class size by duplicating its examples.
 
-Tomek Links Sampling : Removes instances from the majority class that are the nearest neighbors of minority class examples.
+- Tomek Links: Removes overlapping instances between the majority and minority classes.
 
-SMOTE Sampling : Synthetic Minority Over-sampling Technique (SMOTE) generates synthetic examples in the feature space.
+- SMOTE (Synthetic Minority Oversampling Technique): Creates synthetic examples for the minority class.
 
-NearMiss Sampling : Selects examples of the majority class that are closest to the minority class.
+- NearMiss: Selects majority class examples that are closest to the minority class examples.
 
 ## Machine Learning Models
 
-Logistic Regression 
+- Logistic Regression (LogReg)
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
 
-Decision Tree 
+Each model was trained and tested with all five sampling techniques, and accuracy was used as the primary evaluation metric.
 
-Random Forest 
-
-Support Vector Machine 
-
-K-Nearest Neighbors 
-
-Each model is trained and tested with the five sampling techniques, and performance is evaluated using accuracy.
+## Results Summary
+The performance of each sampling technique with various machine learning models is summarized in the table below:
 
 ![My Image](image.png)
 
-## After evaluating the performance of various sampling techniques combined with different machine learning models, the results revealed that RandomForestClassifier along with oversampler sampling method had the most accuracy of 0.997817
+## Key Insights
+
+- Random Forest with Random Oversampling and Smote yielded the highest accuracy of 1.000, making it the most effective combination for detecting fraudulent transactions.
+- Tomek Links with SVM and Random Oversampling with KNN also demonstrated strong performance, showcasing their potential in handling imbalanced datasets effectively.
